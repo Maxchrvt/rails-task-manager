@@ -1,0 +1,9 @@
+<% @tasks.each do |task| %>
+<h1><%= link_to task.name, task_path(task)  %></h1>
+
+<p><%= task.description %></p>
+<p> Statut : <%= task.done ? "fait" : "à faire" %> <p>
+<% end %>
+
+
+<%= link_to "Proposer une tache", new_task_path %>
